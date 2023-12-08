@@ -61,7 +61,8 @@
   }
 </style>
 <body>
-<script src="https://www.w3counter.com/tracker.js?id=129882"></script>
+<!-- <script src="https://www.w3counter.com/tracker.js?id=129882"></script> -->
+<script src="https://www.w3counter.com/tracker.js?id=151012"></script>
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
   <div class="w3-bar" id="myNavbar">
@@ -71,7 +72,7 @@
     <a href="#home" class="w3-bar-item w3-button">HOME</a>
     <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
     <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PORTFOLIO</a>
-    <a href="#resume" class="w3-bar-item w3-button w3-hide-small"><i class="fas fa-file"></i> RESUME</a>
+    <a href="#resume" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-file"></i> RESUME</a>
     <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
     <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
     </a>
@@ -101,19 +102,23 @@
   <h3 class="w3-center">ABOUT ME</h3>
   <p class="w3-center"><em>Candidate for a Research Masters Degree with a Concentration in Robotics at Carnegie Mellon University</em></p>
   <p>My name is Madeleine Weaver and I am pursuing a Masters degree in Mechanical Engineering with a concentration in Robotics at Carnegie Mellon University.
-I earned an associates degree in Electrical and Computer Engineering at Massachusetts Bay Community College, during which time I participated in a NSF-funded research program at the University of Southern California's MxR lab where I worked on a team to build a mixed-reality environment to study ethical decision-making.
+I earned an associates degree in Electrical and Computer Engineering at Massachusetts Bay Community College, during which time I participated in a NSF-funded research program at the University of Southern California's MxR lab where I worked on a team to build an augmented reality environment to study ethical decision-making.
   </p>
   <div class="w3-row">
     <div class="w3-col m6 w3-center w3-padding-large">
-     <img src="ISEC%20Photo.jpg" class="w3-image w3-round" style="width:100%">
+     <img src="Maddy_bridge2.jpg" class="w3-image w3-round" style="width:100%">
     </div>
 
     <!-- Hide this text on small devices -->
     <div class="w3-col m6 w3-hide-small w3-padding-large">
-      <p>I earned my bachelor's degree in Electrical and Computer Engineering from Northeastern University and worked in Professor Alireza Ramezani's SiliconSynapse Lab as an undergraduate research assistant to help build a bio-mimetic bat robot. I also participated two years in a row on a finalist team in NASA's Big Idea Challenge to address specific challenges in implementing robotic systems in space. 
+      <p>I earned my bachelor's degree in Electrical and Computer Engineering from Northeastern University and worked in Professor Alireza Ramezani's SiliconSynapse Lab as an 
+        undergraduate research assistant to help build a bio-mimetic bat robot. I also participated two years in a row on a finalist team in NASA's Big Idea Challenge to address 
+        specific challenges in implementing robotic systems in space. 
 
 While studying at Northeastern University, I had one position as an Animatronics Engineer Co-Op at Hasbro and another at FGC Plasma Solutions as an Electrical Engineer Co-Op. 
 
+In pursuing a Master's degree at Carnegie Mellon University, I became a member of AiPEX lab where I studied Artificial Intelligence and Machine Learning applied to robotic control and 
+design. I presented my research at several global venues including companies in India and Japan, as well as CMU Africa.
 My interests include humanoid robots and the intersection of art and technology.</p>
     </div>
   </div>
@@ -134,62 +139,168 @@ My interests include humanoid robots and the intersection of art and technology.
 <!-- Container (Portfolio Section) -->
 <div class="w3-content w3-container w3-padding-64" id="portfolio">
   <h3 class="w3-center">MY WORK</h3>
-  <p class="w3-center"><em>Here are some photos of my past projects.<br> Click on the images for a description.</em></p><br>
-
+  <p class="w3-center"><em>Here are some photos of my past projects.<br> Click on the images for a description.</em></p>
   <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
-  <p class="w3-center"><em><b>Bat Bot</b><br>SiliconSynapse, Northeastern University</em>
+    
+  <p class="w3-center"><em><b>Humanoid Face Robot</b><br>AiPEX Lab, Carnegie Mellon University</em><br>While in the computer vision domain
+    there exist many deep learning methods to generate and retarget lip-synchronization motion to 3D models, there is presently no analogous method
+  to retarget these 3D animations to physical robots. In this work in progress, we seek to develop a physically constrained method to co-design hardware and a controller
+to enable the natural animation of a robot corresponding to input speech audio.</em>
+    <div class="w3-row-padding w3-center">
+      <div class="w3-col m3">
+        <img src="SofaGif.gif" style="width:110%" onclick="onClick(this)" class="w3-hover-opacity"
+             alt="<b>Reinforcement Learning Network Training</b><p><em> Depicted is an example of the our Actor-Critic
+              RL agent iteratively changing the kinematic design of the robot and comparing the generated 3D mesh to a ground-truth 3D mesh representing
+              our desired actuation.
+             </em></p>">
+      </div>
+  
+      <div class="w3-col m3">
+        <img src="facemeshes.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+             alt="<b>Plot of the Robot Face Mesh with Actuator Placement Indicated</b><p><em>This figure shows a naive placement of our actuators according to the 
+              FACS model, a model which many works cite when motivating the kinematic design of humanoid face robots. These positions, the angles the forces apply to each
+              point and the amplitude at which the force is applied is sent to our simulator. The output of the simulator is then compared to our ground truth to calculate
+              the network reward. These parameters are then iteratively changed to optimize our simulations likeness to our ground truth animation.
+             </em></p>">
+      </div>
+  
+      <div class="w3-col m3">
+        <img src="robotheadgif.gif" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+             alt="<b>Physical Robot</b><p><em>This illustrates the cable-driven actuation of our physical robot.</em></p>">
+      </div>
+  
+      <div class="w3-col m3">
+        <img src="robot head poster.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+             alt="<b>Research Poster</b><p><em>This research poster describes the full motivation and project pipeline, and was presented at CMU Africa to encourage students to form collaborations with
+               Pittsburgh-based AiPEX Lab.
+             </em></p>">
+      </div>
+    </div>
+  
+  <p class="w3-center"><em><b>Jellyfish Robot</b><br>Bioinspired Robotics Course Project, Carnegie Mellon University</em><br>As the effects of climate change begin to affect ecosystems in ways that aren’t 
+    immediately apparent, it’s important to observe environments at risk. Typically researchers use robotic underwater vehicles to track and study aquatic life. These robots are robust to incident currents 
+    underwater, but the wake from their propellers may disrupt the ecosystem the robot intends to study. To make aquatic environmental monitoring systems less obtrusive, we propose using a jellyfish-inspired 
+    robot to study marine life. We hypothesize that the wake from jellyfish-inspired robots will be less turbulent and therefore reduce the disturbance to the ecosystem. We show that an electromagnet-driven 
+    propulsion system will produce less turbulent wake than propeller-based systems. </em>
+    <div class="w3-row-padding w3-center">
+      <div class="w3-col m3">
+        <img src="Jellyfish Mold.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+             alt="<b>Results</b><p><em> Our simulated jellyfish bell was too large to be practical to prototype using digital fabrication methods. By lasercutting acrylic guides defining the cross-sectional shape 
+              of our CAD model, we were able to sculpt a model from WED clay and manually create a fiberglass mold.
+             </em></p>">
+      </div>
+  
+      <div class="w3-col m3">
+        <img src="jellysimgif.gif" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+             alt="<b>Jellyfish Bell Simulation</b><p><em>To inform the design of our jellyfish bell, we iteratively changed the parameters of our CAD model and simulated its motion given the calculated force applied
+              by the electromagnetic actuator. We selected our design based on how well it displaced water while also resisting deformation enough to return to its initial shape after the load was removed.
+             </em></p>">
+      </div>
+  
+      <div class="w3-col m3">
+        <img src="minijellyswimgif.gif" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+             alt="<b>Small-Scale Prototype Testing</b><p><em>We submerged a small-scale prototype of our jellyfish robot in water to determine the turbulance its propulsion mechanism created. This turbulance measurement
+              was compared against turbulance created by propeller propulsed robots. Results are quantified in our poster. </em></p>">
+      </div>
+  
+      <div class="w3-col m3">
+        <img src="Demo Poster.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+             alt="<b>Demo Poster</b>">
+      </div>
+    </div>
+  
+  <p class="w3-center"><em><b>Mouth Robot</b><br>Northeastern University, Carnegie Mellon University</em><br>An important aspect of human interaction is communication through facial expressions 
+    and tone of voice. Natural lip synchronization and verbal sounds in humanoid robotics are important for improving human-robot interactions. The present work gives recommendations for 
+    improvements of a humanoid robot’s hardware and software to better mimic human speech. The method includes sampling audio from the robot for testing of a convolutional neural network (CNN) 
+    trained on human audio to determine if the robot audio signals are similar  to human audio signals. It was determined that limitations in pitch and tone range of both the variable pitch 
+    pneumatic sound generator and the  deformable resonance tube would need to be improved. Reinforcement learning was also recommended for future research to explore more of the hardware’s 
+    abilities to produce a more human-like sound.</em>
   <div class="w3-row-padding w3-center">
     <div class="w3-col m3">
-      <img src="https://drive.google.com/uc?id=1RrnosRj0GqEIrO5d8-gBvURRO8z_mgoR" style="width:100%" height="165" onclick="onClick(this)" class="w3-hover-opacity"
+      <img src="mouthgif2.gif" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+           alt="<b>Mouth Robot</b><p><em>We collected the robot output data using a microphone and data acquisition script written in MatLab. To support our goal of controlling the robot to correctly say the 4 different versions
+            of the word 'ma' in mandarin, each trial was comprised of a set of three vocal pitches per speech tone.
+           </em></p>">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="tonguegif.gif" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+           alt="<b>Soft Robotic Tongue</b><p><em>This soft robotic tongue was constructed to add tonal complexity and range to the robotic mouth hardware. It was controlled using a pneumatic controller donated by the 
+            the Soft Robotic Toolkit of Harvard University. 
+           </em></p>">
+    </div>
+    <div class="w3-col m3">
+      <img src="MouthRobotResluts.png" style="width:210%" height="310" onclick="onClick(this)" class="w3-hover-opacity"
+           alt="<b>Results</b>">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="spacer.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+           alt="<b>Nothing</b><p><em>Nothing</em></p>">
+    </div>
+  </div>
+
+  <p class="w3-center"><em><b>Bat Bot</b><br>SiliconSynapse, Northeastern University</em><br>The Bat Bot was designed and fabricated to test a hypothesis that a robot could fly by flapping its wings, and in doing so it could interact with people more safely than a propeller-driven arial robot. My contribution to this project was lasercutting PCB traces
+    onto the carbon fiber chassis to meet requirements concerning weight and drag, designing the layout of a flexible PCB that served a dual purpose as the bat's wing, soldering surface-mounted
+    components to the PCB under a microscope, and creating the skeleton program to access the actuators and sensors.</em>
+  <div class="w3-row-padding w3-center">
+    <div class="w3-col m3">
+      <img src="bat bot 1.jpg" style="width:100%" height="165" onclick="onClick(this)" class="w3-hover-opacity"
            alt="<b>Bat Bot Chassis</b><p><em> My contribution was laser cutting copper traces connecting the motors and radio
-           transmitter to the battery and each other to eliminate the need for a PCB, reducing the weight of the robot. In
+           transmitter to the battery, eliminating the need for a PCB and reducing the weight of the robot. In
            order to complete this task, I had to edit the original chassis to allow a path for the traces and arrange the
            hardware considering the target center of mass. I meticulously measured the hardware to bring the traces directly to the
            pads so I could connect the traces to the hardware with solder bridges.</em></p>">
     </div>
 
     <div class="w3-col m3">
-      <img src="https://drive.google.com/uc?id=1Nv5qXdvK6iGTKPRfPvwdEVrYlSnETD0R" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
-           alt="<b>Bat Bot Wing</b><p><em>I worked to solder each component onto the flexible membrane PCB, designed to also serve as the
-           wing of the Bat Bot. Having not had prior experience soldering components this small, in order to complete this task
-           successfully I had to do extensive online research and watch several training videos. I then programmed the STM32
+      <img src="Bat bot 4.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+           alt="<b>Bat Bot Wing</b><p><em>I soldered each component onto the flexible membrane PCB, designed to also serve as the
+           wing of the Bat Bot. Having not had prior experience soldering components this small, I did extensive online research and watched several training videos. I then programmed the STM32
            processor in C to send commands to the sensors and drivers over an SPI interface.</em></p>">
     </div>
 
     <div class="w3-col m3">
-      <img src="https://drive.google.com/uc?id=1tuDCFWE1z0bg-Qg5bHE3u9YfuHwvWj-g" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+      <img src="bat bot 2.PNG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
            alt="<b>Layout Design for Flexible PCB</b>">
     </div>
 
     <div class="w3-col m3">
-      <img src="https://drive.google.com/uc?id=1YQkQM3WafrHz7DVfMD4pKaP8jAepWnDA" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
-           alt="<b>The Old Version of the Bat Bot</b><p><em>Which we intend to improve upon.</em></p>">
+      <img src="bat bot 3.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+           alt="<b>A Version of the Bat Bot</b><p><em>This is an older version of the bat robot which we worked to improve.</em></p>">
     </div>
   </div>
-  <p class="w3-center"><em><b>Augmented Reality Environment</b><br>Mixed Reality Lab, University of Southern California</em>
+  <p class="w3-center"><em><b>Augmented Reality Environment</b><br>Mixed Reality Lab, University of Southern California</em><br>To test the effect of fidelity and immersion of an augmented
+  reality environment on ethical decision-making, we created a virtual environment where the user would play a role in the trolley problem. My individual contribution was designing and fabricating
+a physical lever using a motorcycle damper to enable the discrete control of the stiffness of the lever. The lever was outfitted with motion trackers to enable the realistic motion of
+a corresponding virtual lever. I also 3D modeled several scene components like hardhats and vests in Blender.</em>
   <div class="w3-row-padding w3-center w3-section">
     <div class="w3-col m3">
-      <img src="https://drive.google.com/uc?id=11v_iPIzH1Hs662JyaeGjmJvvqE0EMNd2" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+      <img src="IEEE VR.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
            alt="<b>Our Best Poster Honorable Mention Award</b>">
     </div>
 
     <div class="w3-col m3">
       <img src="Earmuffs.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
-           alt="<b>Our Human Model</b><p><em>We used 3D scans of interns for our human models, and created hard hats, ear protection
+           alt="<b>Our Human Model</b><p><em>We used 3D scans of interns for our human models and I modeled hard hats, ear protection
            and safety vests in Blender.</em></p>">
     </div>
 
     <div class="w3-col m3">
-      <img src="https://drive.google.com/uc?id=1dzDgM_LeHk2ELvOudBrjY5vUvRqBStUW" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+      <img src="lever.PNG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
            alt="<b>Real Lever Juxtaposed with Virtual Lever</b>">
     </div>
 
     <div class="w3-col m3">
-      <img src="https://drive.google.com/uc?id=1We8V7be7Pfeqc2F_-CLMGVeb_ZJQ_Vb-" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+      <img src="damper.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
            alt="<b>Integrated Motorcycle Damper</b><p><em>To allow study to include discrete values of resistance.</em></p>">
     </div>
   </div>
-  <p class="w3-center"><em><b>Horseshoe Crab Robot</b><br>Fab Lab, Dassault Systemes</em>
+  <p class="w3-center"><em><b>Horseshoe Crab Robot</b><br>Fab Lab, Dassault Systemes</em><br>This was a project I worked on independently 
+  while I was an intern at the Dassault Systemes FabLab. I was initially inspired to design this horseshoe crab robot after having attended
+a BattleBots-like event thrown by a robot fighting league called Mass Destruction that was held in a makerspace called the Artisan's Asylum
+where I used to volunteer. I noticed that the simple wedge shaped robots were the most effective despite many not even having a weapon,
+because they </em>
   <div class="w3-row-padding w3-center w3-section">
     <div class="w3-col m3">
       <img src="crab4.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
@@ -213,6 +324,7 @@ My interests include humanoid robots and the intersection of art and technology.
            alt="<b>Airflow Control Mechanism</b><p><em>Milled to follow the contours of the inside of the shell</em></p>">
     </div>
   </div>
+  <!-- <p class="w3-center"><em>Here are some photos of my personal projects.<br> Click on the images for a description.</em></p> -->
 </div>
 
 <!-- Modal for full size images on click-->
@@ -238,8 +350,8 @@ My interests include humanoid robots and the intersection of art and technology.
 <!-- Container (Resume Section) -->
 <div class="w3-content w3-container w3-padding-64" id="resume">
   <h3 class="w3-center">RESUME</h3>
-  <p class="w3-center"><em>References available upon request</em></p><br>
-  <iframe src="Resume 12-22-21.pdf" style="width:100%" height=1200></iframe>
+  <!-- <p class="w3-center"><em>References available upon request</em></p><br> -->
+  <iframe src="Maddy_s_Resume_12_6.pdf" style="width:100%" height=1200></iframe>
 </div>
 <div class="w3-row w3-center w3-dark-grey w3-padding-16"><br><br>
 
@@ -257,7 +369,7 @@ My interests include humanoid robots and the intersection of art and technology.
 <!-- Container (Contact Section) -->
 <div class="w3-content w3-container w3-padding-64" id="contact">
   <h3 class="w3-center">MADELEINE WEAVER</h3>
-  <p class="w3-center"><em>Electrical and Computer Engineer</em></p>
+  <!-- <p class="w3-center"><em>Electrical and Computer Engineer</em></p> -->
 
   <div class="w3-row w3-padding-32 w3-section">
     <div class="w3-col m4 w3-container">
@@ -265,11 +377,10 @@ My interests include humanoid robots and the intersection of art and technology.
     </div>
     <div class="w3-col m8 w3-panel">
       <div class="w3-large w3-margin-bottom">
-        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Providence, RI<br>
+        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Pittsburgh, PA<br>
         <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: (781) 591-1292<br>
-        <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: weaver.ma@husky.neu.edu<br>
-        <i class="fab fa-skype fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Skype: MadeleineWeaver@outlook.com<br>
-        <i class="fab fa-linkedin fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> LinkedIn: linkedin.com/in/madeleine-weaver<br>
+        <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: maddygweaver@gmail.com<br>
+        <i class="fa fa-linkedin fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> LinkedIn: linkedin.com/in/madeleine-weaver<br>
       </div>
 
     </div>
