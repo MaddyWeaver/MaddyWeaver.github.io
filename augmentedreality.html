@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Mouth Robot</title>
+<title>Augmented Reality Environment</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -18,30 +18,27 @@ and is wrapped around the whole page content, except for the footer in this exam
 
 <!-- Header -->
 <header class="w3-container w3-center w3-padding-32"> 
-  <h1><b>It Takes Fewer Muscles to Smile Than Frown</b></h1>
-  <p>Representing Robots with
-    Soft Components as Graphs to Enable Surface-Aware Natural Motion</p>
+  <h1><b>Advancing Ethical Decision Making in Virtual Reality</b></h1>
+  <!-- <p>Representing Robots with
+    Soft Components as Graphs to Enable Surface-Aware Natural Motion</p> -->
 </header>
 <div class="w3-row w3-center w3-dark-grey w3-padding-16"><br><br>
 </div>
 <!-- Container (About Section) -->
 <div class="w3-content w3-container w3-padding-64" id="about">
     <h3 class="w3-center">Project Overview</h3>
-    <p class="w3-center"><em>Madeleine Weaver, Sakthi Kumar Arul Prakash, Ananyananda Dasari, Conrad Tucker</em></p>
-    <p class="w3-center"><em>AiPEX Lab, Carnegie Mellon University</em></p>
+    <p class="w3-center"><em>Sin-Hwa Kang, Jake Chanenson, Peter Cowal, Madeleine Weaver, Pranav Ghate, David M. Krum</em></p>
+    <p class="w3-center"><em>MxR Lab, University of Southern California</em></p>
     <p>
     </p>
     <div class="w3-row">
         <div class="w3-col m6 w3-center w3-padding-large">
-            <img src="renderedfaces.png" class="w3-image w3-round" style="width:100%">
+            <img src="lever.PNG" class="w3-image w3-round" style="width:100%">
         </div>
-        <p>While in the computer vision domain
-          there exist many deep learning methods to generate and retarget lip-synchronization motion to 3D models, there is presently no analogous method
-        to retarget these 3D animations to physical robots. In this work in progress, we seek to develop a physically constrained method to co-design hardware and a controller
-        to enable the natural animation of a robot corresponding to input speech audio.</p>
-        <p><b>Individual Contributions:</b> One of two first authors, Conceptualization of research problem, 3D mesh model manipulation, Reinforcement Learning network construction and implementation.
+        <p>To test the effect of fidelity and immersion of an augmented reality environment on ethical decision-making, we created a virtual environment where the user would play a role in the trolley problem. My individual contribution was designing and fabricating a physical lever using a motorcycle damper to enable the discrete control of the stiffness of the lever. The lever was outfitted with motion trackers to enable the realistic motion of a corresponding virtual lever. I also 3D modeled several scene components like hard hats and vests in Blender..</p>
+        <p><b>Individual Contributions: </b>Designed and built physical lever and corresponding virtual lever with the use of a motorcycle damper in mind to enable discrete variability in lever stiffness. Designed many high-fidelity virtual objects used in the scene, including hard hats and construction vests.
         </p>
-        <!-- <p><b>Awarded 'Best Overall Project' at Design Expo</b></p> -->
+        <p><b>Awarded "Best Poster Honorable Mention" at IEEE VR 2019 Osaka</b></p>
     </div>
 </div>
 
@@ -52,18 +49,14 @@ and is wrapped around the whole page content, except for the footer in this exam
 <div class="w3-col l8 s12">
   <!-- Blog entry -->
   <div class="w3-card-4 w3-margin w3-white">
-    <img src="facerobot_1.png" style="width:100%">
+    <img src="lever_1.JPG" style="width:100%">
     <div class="w3-container">
       <!-- <h3><b>A jellyfish-inspired robot, compared to current robots, will enable less obtrusive ocean observation -->
       <!-- </b></h3> -->
     </div>
 
     <div class="w3-container">
-      <p>The term ‘motion retargeting’ is used to describe the practice of taking a natural motion or animation from some source by means of motion capture or 3D scanning and mapping that motion onto some target.
-        In our case study, we use the motion of a human face as our source and a robotic representation of a human face as our target. 
-        This is a deceptively challenging task, as the dimensions of any human face or figure often do not map cleanly to the dimensions of a source robot, particularly if the designer wants to use the diverse motion of many sources. 
-        One class of solutions proposed to this problem include representing a human figure as a graph of nodes and edges that can be scaled to accommodate different forms as sources for animation. This method is effective if the success of the robot is determined by how well rigid linkages can move in synchronization with the rigid linkages of the simplified model of the human body.
-        Another class of solutions concern the movement of the human face, which cannot be modeled with nodes and linkages but rather a series of keypoints on the face that correspond to action units. These action units describe descretized features of the face including whether the outer eyebrow, left mouth corner or right eyelid are displaced. These features are dimensionless and ignore the overall shape of the outer surface of the face, and result in an animation that is not tailored to the design of the target robot.        
+      <p>    
         </p>
       <div class="w3-row">
         <!-- <div class="w3-col m8 s12">
@@ -79,7 +72,7 @@ and is wrapped around the whole page content, except for the footer in this exam
 
   <!-- Blog entry -->
   <div class="w3-card-4 w3-margin w3-white">
-  <img src="facerobot_2.png" alt="Jellyfish Simulation" style="width:100%">
+  <img src ="https://media.giphy.com/media/SYjOZFumW0xAHMSeoj/giphy.gif" alt="Jellyfish Simulation" style="width:100%">
     <div class="w3-container">
       <!-- <h3><b>Adding splines to the bell’s design, increases rigidity and allows for consistent deformation
       </b></h3> -->
@@ -87,13 +80,7 @@ and is wrapped around the whole page content, except for the footer in this exam
     </div>
 
     <div class="w3-container">
-      <p>While in our case study we use an example of a human face, this question can be extended to many different types of robots with soft components intended to mimic human behavior. 
-        This class of robots have qualities desired in entertainment and medical spaces by virtue of the fact that they are soft and therefore particularly suited to use cases concerned with physical interaction with humans.
-        The first of the two examples pictured is Punyo, a robot in development at Toyota Research Laboratory, whose inflatable actuators enable it to not only grasp household items like laundry baskets effectively but even grasp human bodies without crushing them to provide assistance in physical a therapy setting.
-        The second example, the CMU arm, began as a robot designed for medical applications but later served as the inspiration for the Disney character Baymax. 
-        In each of these examples, sophisticated control methods were used to maneuver these robots but each neither included information of the deformation of the outer surface of the soft components. 
-        This information could be use to improve grasping and to enable animators to control the outer aesthetics of the robots.
-        The hypothesis my work seeks to prove is that if we were to represent robots with soft components with a 3D mesh rather than a simplified series of lines and nodes or keypoints, we could lose less information in modeling our robots and improve their dynamics and control.
+      <p>
         
       </p>
       <div class="w3-row">
@@ -109,7 +96,7 @@ and is wrapped around the whole page content, except for the footer in this exam
 
     <!-- Blog entry -->
     <div class="w3-card-4 w3-margin w3-white">
-        <img src="facerobot_3.png" alt="Jellyfish Actuator" style="width:100%">
+        <img src="lever_2.PNG" alt="Jellyfish Actuator" style="width:100%">
           <div class="w3-container">
             <!-- <h3><b>Two electromagnets alternately repel and attract the “soft magnet” which actuates the bell and increases the force of propulsion
             </b></h3> -->
@@ -132,7 +119,7 @@ and is wrapped around the whole page content, except for the footer in this exam
 
     <!-- Blog entry -->
     <div class="w3-card-4 w3-margin w3-white">
-      <img src="facerobot_4.png" alt="Jellyfish Actuation Testing" style="width:100%">
+      <img src="lever_4.PNG" alt="Jellyfish Actuation Testing" style="width:100%">
         <div class="w3-container">
           <h3><b>
           </b></h3>
@@ -154,7 +141,7 @@ and is wrapped around the whole page content, except for the footer in this exam
 
     <!-- Blog entry -->
     <div class="w3-card-4 w3-margin w3-white">
-      <img src="facerobot_5.png" alt="Jellyfish Results" style="width:100%">
+      <img src="lever_3.jpg" alt="Jellyfish Results" style="width:100%">
         <div class="w3-container">
           <h3><b>
           </b></h3>
