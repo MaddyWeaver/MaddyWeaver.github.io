@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Mouth Robot</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+</style>
+</head>
+<body class="w3-light-grey">
+
+<!-- w3-content defines a container for fixed size centered content, 
+and is wrapped around the whole page content, except for the footer in this example -->
+<div class="w3-content" style="max-width:1400px">
+
+<!-- Header -->
+<header class="w3-container w3-center w3-padding-32"> 
+  <h1><b>Learning Human-Like Tonal Inflections for Humanoid Robotics</b></h1>
+  <p>Hardware design based on a mouth robot created by Professor Hideyuki Sawada from Kagawa University in Japan</p>
+</header>
+<div class="w3-row w3-center w3-dark-grey w3-padding-16"><br><br>
+</div>
+<!-- Container (About Section) -->
+<div class="w3-content w3-container w3-padding-64" id="about">
+    <h3 class="w3-center">Project Overview</h3>
+    <p class="w3-center"><em>Charlotte Avra, Maddy Weaver, Mya Chappel, Thomas Klein, Aditya Bapat</em></p>
+    <p class="w3-center"><em>Intro to Artificial Intelligence and Machine Learning for Engineers, Carnegie Mellon University</em></p>
+    <p>
+    </p>
+    <div class="w3-row">
+        <div class="w3-col m6 w3-center w3-padding-large">
+            <img src="mouthgif.gif" class="w3-image w3-round" style="width:100%">
+        </div>
+        <p>Humanoid robots are increasingly being developed for healthcare, education and service applications. One aspect of humanoid
+           robotics that remains an unsolved problem is achieving high fidelity lip synchronization. One potential approach to improving
+            lip synchronization is using machine learning (ML) methods to mechanically actuate human speech sounds, linking auditory and
+             visual output. The present work gives recommendations for improving humanoid robot hardware and software to better mimic 
+             human speech. The method includes sampling audio from the robot for testing of a convolutional neural network (CNN) trained 
+             on human audio to determine if the robot audio signals are similar to human audio signals. It was determined that limitations 
+             in pitch and tone range of both the variable pitch pneumatic sound generator and the deformable resonance tube would need to 
+             be improved. Reinforcement learning was also recommended for future research to explore more of the hardware’s abilities to 
+             produce a more human-like sound.</p>
+        <p><b>Individiual Contributions:</b> All mechanical design, all , Data Acquisition, MatLab, Python, Casting and Molding, Digital Fabrication, Soft Robotics</p>
+    </div>
+</div>
+
+<!-- Grid -->
+<div class="w3-row">
+
+<!-- Blog entries -->
+<div class="w3-col l8 s12">
+  <!-- Blog entry -->
+  <div class="w3-card-4 w3-margin w3-white">
+    <img src="mouth_audioprocessing.png" alt="Audio Processing" style="width:100%">
+    <div class="w3-container">
+      <h3><b>AUDIO PROCESSING</b></h3>
+    </div>
+
+    <div class="w3-container">
+      <p>In machine learning, classifying audio signals often begins with converting from the time to frequency domains by applying a Fast Fourier Transform (FFT) over several windowed segments to produce a spectrogram, a visualization of sound with frequency and decibel level over time. If frequency is converted from Hertz to the Mel Scale, a representation of frequency that mimics the perception of sound by humans and hence why it’s used often in machine learning, the spectrogram is called a Mel Spectrogram. 
+        From there, the Mel Frequency Cepstral Coefficients can be found by applying a discrete cosine transformation and these images can be passed into a convolutional neural network to classify its various features. 
+        </p>
+      <div class="w3-row">
+        <!-- <div class="w3-col m8 s12">
+          <p><button class="w3-button w3-padding-large w3-white w3-border"><b>READ MORE »</b></button></p>
+        </div>
+        <div class="w3-col m4 w3-hide-small">
+          <p><span class="w3-padding-large w3-right"><b>Comments  </b> <span class="w3-tag">0</span></span></p>
+        </div> -->
+      </div>
+    </div>
+  </div>
+  <hr>
+
+  <!-- Blog entry -->
+  <div class="w3-card-4 w3-margin w3-white">
+  <img src="Copy of Final Presentation.pptx.png" alt="Hardware" style="width:100%">
+    <div class="w3-container">
+      <h3><b>HARDWARE</b></h3>
+      <!-- <h5>Title description, <span class="w3-opacity">April 2, 2014</span></h5> -->
+    </div>
+
+    <div class="w3-container">
+      <p>We used a robotic mouth comprised of a variable pitch pneumatic sound generator, a deformable resonance 
+        tube, and a series of servo motors that can be actuated to deform the shape of the tube. The robot was 
+        controlled with an Arduino and a servo motor driver, and the produced sound data was collected through 
+        a microphone. </p>
+      <div class="w3-row">
+        <!-- <div class="w3-col m8 s12">
+          <p><button class="w3-button w3-padding-large w3-white w3-border"><b>READ MORE »</b></button></p>
+        </div>
+        <div class="w3-col m4 w3-hide-small">
+          <p><span class="w3-padding-large w3-right"><b>Comments  </b> <span class="w3-badge">2</span></span></p>
+        </div> -->
+      </div>
+    </div>
+  </div>
+
+    <!-- Blog entry -->
+    <div class="w3-card-4 w3-margin w3-white">
+        <img src="mouth_learningworkflow.png" alt="Learning Workflow" style="width:100%">
+          <div class="w3-container">
+            <h3><b>LEARNING WORKFLOW</b></h3>
+            <!-- <h5>Title description, <span class="w3-opacity">April 2, 2014</span></h5> -->
+          </div>
+      
+          <div class="w3-container">
+            <p>Our goal for the scope of this project was to enable the robot to reliably produce the four words with the 
+                articulation ‘ma’ in Mandarin. To construct our dataset, we structured each data point as a sequence of 3 
+                varied pitches with a repeating open and closed actuation of the mouth. We populated each sequence with an 
+                initial guess of the relative pitch values of a high-level, rising, dipping or a falling tone, then labeled 
+                them as such. We executed these tones on the robot and recorded the audio output.</p>
+            <p>
+                For the data augmentation process, each audio signal was first pitched down, then increased volume, and added 
+                a fade in/fade out. 60 MFCC’s for each audio signal were then computed using the librosa sound processing 
+                library, zero padding was applied, and then they were input into the CNN. 
+            </p>
+            <div class="w3-row">
+              <!-- <div class="w3-col m8 s12">
+                <p><button class="w3-button w3-padding-large w3-white w3-border"><b>READ MORE »</b></button></p>
+              </div>
+              <div class="w3-col m4 w3-hide-small">
+                <p><span class="w3-padding-large w3-right"><b>Comments  </b> <span class="w3-badge">2</span></span></p>
+              </div> -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Blog entry -->
+    <div class="w3-card-4 w3-margin w3-white">
+        <img src="mouth_modeloverview.png" alt="Model Overview" style="width:100%">
+            <div class="w3-container">
+            <h3><b>MODEL OVERVIEW</b></h3>
+            <!-- <h5>Title description, <span class="w3-opacity">April 2, 2014</span></h5> -->
+            </div>
+        
+            <div class="w3-container">
+            <p>The CNN architecture we used was adapted from sound-mnist and has 3 convolution layers
+                 with relu activation and batch normalization after each layer. Then a max pooling layer 
+                 and dropout followed by 3 fully connected layers the last one having softmax activation. 
+
+                The goal of the model was to learn from audio signals produced by humans, specifically 
+                4,900 signals from the Tone Perfect Multimodal Database, and be tested on 1,100 audio 
+                signals produced by the robot to determine if the robot sounds were human-like. 
+                
+                We wanted the model to generalize enough such that it could maintain high accuracy given 
+                a validation set of MFCCs that may look very different from what it was trained on, but 
+                still reflect the human-likeness of the validation set through its softmax output predictions: 
+                high value predictions for human-like sounds and low value predictions for non-human-like sounds. 
+            </p>
+            <div class="w3-row">
+                <!-- <div class="w3-col m8 s12">
+                <p><button class="w3-button w3-padding-large w3-white w3-border"><b>READ MORE »</b></button></p>
+                </div>
+                <div class="w3-col m4 w3-hide-small">
+                <p><span class="w3-padding-large w3-right"><b>Comments  </b> <span class="w3-badge">2</span></span></p>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Blog entry -->
+    <div class="w3-card-4 w3-margin w3-white">
+        <img src="mouth_results.png" alt="Results" style="width:100%">
+            <div class="w3-container">
+            <h3><b>Results</b></h3>
+            <!-- <h5>Title description, <span class="w3-opacity">April 2, 2014</span></h5> -->
+            </div>
+        
+            <div class="w3-container">
+            <p>We first show here four examples 
+                of the MFCC’s that the model learned and was tested on: human on the left and 
+                robot on the right. 
+
+                We then show model performance when trained on roughly 1,000 robot audio files. 
+                This proves that the model can successfully classify robot audio files when trained 
+                on them with 94.2% accuracy. 
+                
+                However, when we moved to training on human audio files, the model had difficulty 
+                recognizing features in the validation set as shown here.
+                In the 3D plots to the right, we find that for three of the four classes our correctly 
+                
+                predicted data points are clustered and separable. This suggests that by changing the 
+                bounds of our initial guesses we could increase our accuracy. We also find that many of 
+                the correctly predicted data points fall on the edges of our plots, indicating increasing 
+                the limited tonal range of our pitch generator may increase our future success.
+                 
+            </p>
+            <div class="w3-row">
+                <!-- <div class="w3-col m8 s12">
+                <p><button class="w3-button w3-padding-large w3-white w3-border"><b>READ MORE »</b></button></p>
+                </div>
+                <div class="w3-col m4 w3-hide-small">
+                <p><span class="w3-padding-large w3-right"><b>Comments  </b> <span class="w3-badge">2</span></span></p>
+                </div> -->
+            </div>
+        </div>
+    </div>
+<!-- END BLOG ENTRIES -->
+</div>
+
+<!-- Introduction menu -->
+<div class="w3-col l4">
+  <!-- About Card -->
+  <!-- <div class="w3-card w3-margin w3-margin-top">
+  <img src="/w3images/avatar_g.jpg" style="width:100%">
+    <div class="w3-container w3-white">
+      <h4><b>My Name</b></h4>
+      <p>Just me, myself and I, exploring the universe of uknownment. I have a heart of love and a interest of lorem ipsum and mauris neque quam blog. I want to share my world with you.</p>
+    </div>
+  </div><hr> -->
+  
+  <!-- Posts -->
+  <!-- <div class="w3-card w3-margin">
+    <div class="w3-container w3-padding">
+      <h4>Popular Posts</h4>
+    </div>
+    <ul class="w3-ul w3-hoverable w3-white">
+      <li class="w3-padding-16">
+        <img src="/w3images/workshop.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+        <span class="w3-large">Lorem</span><br>
+        <span>Sed mattis nunc</span>
+      </li>
+      <li class="w3-padding-16">
+        <img src="/w3images/gondol.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+        <span class="w3-large">Ipsum</span><br>
+        <span>Praes tinci sed</span>
+      </li> 
+      <li class="w3-padding-16">
+        <img src="/w3images/skies.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+        <span class="w3-large">Dorum</span><br>
+        <span>Ultricies congue</span>
+      </li>   
+      <li class="w3-padding-16 w3-hide-medium w3-hide-small">
+        <img src="/w3images/rock.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+        <span class="w3-large">Mingsum</span><br>
+        <span>Lorem ipsum dipsum</span>
+      </li>  
+    </ul>
+  </div> -->
+  <hr> 
+ 
+  <!-- Labels / tags -->
+  <div class="w3-card w3-margin">
+    <div class="w3-container w3-padding">
+      <h4>Keywords</h4>
+    </div>
+    <div class="w3-container w3-white">
+    <p><span class="w3-tag w3-light-grey w3-small w3-margin-bottom">CAD Design</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Convolutional Neural Network</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Data Acquisition</span>
+      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">MatLab</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Soft Robotics</span> 
+      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Python</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Mechanical Sound Generation</span> 
+      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Casting and Molding</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Microcontrollers</span> 
+      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Digital Fabrication</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Motor Drivers</span>
+    </p>
+    </div>
+  </div>
+  
+<!-- END Introduction Menu -->
+</div>
+
+<!-- END GRID -->
+</div><br>
+
+<!-- END w3-content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-dark-grey w3-padding-32 w3-margin-top">
+  <button class="w3-button w3-black w3-disabled w3-padding-large w3-margin-bottom">Previous</button>
+  <button class="w3-button w3-black w3-padding-large w3-margin-bottom">Next »</button>
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+</footer>
+
+</body>
+</html>

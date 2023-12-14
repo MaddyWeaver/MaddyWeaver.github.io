@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Mouth Robot</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+</style>
+</head>
+<body class="w3-light-grey">
+
+<!-- w3-content defines a container for fixed size centered content, 
+and is wrapped around the whole page content, except for the footer in this example -->
+<div class="w3-content" style="max-width:1400px">
+
+<!-- Header -->
+<header class="w3-container w3-center w3-padding-32"> 
+  <h1><b>It Takes Fewer Muscles to Smile Than Frown</b></h1>
+  <p>Representing Robots with
+    Soft Components as Graphs to Enable Surface-Aware Natural Motion</p>
+</header>
+<div class="w3-row w3-center w3-dark-grey w3-padding-16"><br><br>
+</div>
+<!-- Container (About Section) -->
+<div class="w3-content w3-container w3-padding-64" id="about">
+    <h3 class="w3-center">Project Overview</h3>
+    <p class="w3-center"><em>Madeleine Weaver, Sakthi Kumar Arul Prakash, Ananyananda Dasari, Conrad Tucker</em></p>
+    <p class="w3-center"><em>AiPEX Lab, Carnegie Mellon University</em></p>
+    <p>
+    </p>
+    <div class="w3-row">
+        <div class="w3-col m6 w3-center w3-padding-large">
+            <img src="renderedfaces.png" class="w3-image w3-round" style="width:100%">
+        </div>
+        <p>While in the computer vision domain
+          there exist many deep learning methods to generate and retarget lip-synchronization motion to 3D models, there is presently no analogous method
+        to retarget these 3D animations to physical robots. In this work in progress, we seek to develop a physically constrained method to co-design hardware and a controller
+        to enable the natural animation of a robot corresponding to input speech audio.</p>
+        <p><b>Individual Contributions:</b> Design of the electromagnetic actuation system and entire small scale prototype, design and manual fabrication of 
+          the full-sized jellyfish bell, electrical design for the electromechanical actuation system, design and execution of evaluation experiments of
+          some subcomponents.
+        </p>
+        <!-- <p><b>Awarded 'Best Overall Project' at Design Expo</b></p> -->
+    </div>
+</div>
+
+<!-- Grid -->
+<div class="w3-row">
+
+<!-- Blog entries -->
+<div class="w3-col l8 s12">
+  <!-- Blog entry -->
+  <div class="w3-card-4 w3-margin w3-white">
+    <img src="facerobot_1.png" style="width:100%">
+    <div class="w3-container">
+      <!-- <h3><b>A jellyfish-inspired robot, compared to current robots, will enable less obtrusive ocean observation -->
+      <!-- </b></h3> -->
+    </div>
+
+    <div class="w3-container">
+      <p>The term ‘motion retargeting’ is used to describe the practice of taking a natural motion or animation from some source by means of motion capture or 3D scanning and mapping that motion onto some target.
+        In our case study, we use the motion of a human face as our source and a robotic representation of a human face as our target. 
+        This is a deceptively challenging task, as the dimensions of any human face or figure often do not map cleanly to the dimensions of a source robot, particularly if the designer wants to use the diverse motion of many sources. 
+        One class of solutions proposed to this problem include representing a human figure as a graph of nodes and edges that can be scaled to accommodate different forms as sources for animation. This method is effective if the success of the robot is determined by how well rigid linkages can move in synchronization with the rigid linkages of the simplified model of the human body.
+        Another class of solutions concern the movement of the human face, which cannot be modeled with nodes and linkages but rather a series of keypoints on the face that correspond to action units. These action units describe descretized features of the face including whether the outer eyebrow, left mouth corner or right eyelid are displaced. These features are dimensionless and ignore the overall shape of the outer surface of the face, and result in an animation that is not tailored to the design of the target robot.        
+        </p>
+      <div class="w3-row">
+        <!-- <div class="w3-col m8 s12">
+          <p><button class="w3-button w3-padding-large w3-white w3-border"><b>READ MORE »</b></button></p>
+        </div>
+        <div class="w3-col m4 w3-hide-small">
+          <p><span class="w3-padding-large w3-right"><b>Comments  </b> <span class="w3-tag">0</span></span></p>
+        </div> -->
+      </div>
+    </div>
+  </div>
+  <hr>
+
+  <!-- Blog entry -->
+  <div class="w3-card-4 w3-margin w3-white">
+  <img src="facerobot_2.png" alt="Jellyfish Simulation" style="width:100%">
+    <div class="w3-container">
+      <!-- <h3><b>Adding splines to the bell’s design, increases rigidity and allows for consistent deformation
+      </b></h3> -->
+      <!-- <h5>Title description, <span class="w3-opacity">April 2, 2014</span></h5> -->
+    </div>
+
+    <div class="w3-container">
+      <p>While in our case study we use an example of a human face, this question can be extended to many different types of robots with soft components intended to mimic human behavior. 
+        This class of robots have qualities desired in entertainment and medical spaces by virtue of the fact that they are soft and therefore particularly suited to use cases concerned with physical interaction with humans.
+        The first of the two examples pictured is Punyo, a robot in development at Toyota Research Laboratory, whose inflatable actuators enable it to not only grasp household items like laundry baskets effectively but even grasp human bodies without crushing them to provide assistance in physical a therapy setting.
+        The second example, the CMU arm, began as a robot designed for medical applications but later served as the inspiration for the Disney character Baymax. 
+        In each of these examples, sophisticated control methods were used to maneuver these robots but each neither included information of the deformation of the outer surface of the soft components. 
+        This information could be use to improve grasping and to enable animators to control the outer aesthetics of the robots.
+        The hypothesis my work seeks to prove is that if we were to represent robots with soft components with a 3D mesh rather than a simplified series of lines and nodes or keypoints, we could lose less information in modeling our robots and improve their dynamics and control.
+        
+      </p>
+      <div class="w3-row">
+        <!-- <div class="w3-col m8 s12">
+          <p><button class="w3-button w3-padding-large w3-white w3-border"><b>READ MORE »</b></button></p>
+        </div>
+        <div class="w3-col m4 w3-hide-small">
+          <p><span class="w3-padding-large w3-right"><b>Comments  </b> <span class="w3-badge">2</span></span></p>
+        </div> -->
+      </div>
+    </div>
+  </div>
+
+    <!-- Blog entry -->
+    <div class="w3-card-4 w3-margin w3-white">
+        <img src="facerobot_3.png" alt="Jellyfish Actuator" style="width:100%">
+          <div class="w3-container">
+            <!-- <h3><b>Two electromagnets alternately repel and attract the “soft magnet” which actuates the bell and increases the force of propulsion
+            </b></h3> -->
+            <!-- <h5>Title description, <span class="w3-opacity">April 2, 2014</span></h5> -->
+          </div>
+      
+          <div class="w3-container">
+            <p>
+              </p>
+            <div class="w3-row">
+              <!-- <div class="w3-col m8 s12">
+                <p><button class="w3-button w3-padding-large w3-white w3-border"><b>READ MORE »</b></button></p>
+              </div>
+              <div class="w3-col m4 w3-hide-small">
+                <p><span class="w3-padding-large w3-right"><b>Comments  </b> <span class="w3-badge">2</span></span></p>
+              </div> -->
+            </div>
+          </div>
+        </div>
+
+    <!-- Blog entry -->
+    <div class="w3-card-4 w3-margin w3-white">
+      <img src="facerobot_4.png" alt="Jellyfish Actuation Testing" style="width:100%">
+        <div class="w3-container">
+          <h3><b>
+          </b></h3>
+          <!-- <h5>Title description, <span class="w3-opacity">April 2, 2014</span></h5> -->
+        </div>
+    
+        <div class="w3-container">
+          <p></p>
+          <div class="w3-row">
+            <!-- <div class="w3-col m8 s12">
+              <p><button class="w3-button w3-padding-large w3-white w3-border"><b>READ MORE »</b></button></p>
+            </div>
+            <div class="w3-col m4 w3-hide-small">
+              <p><span class="w3-padding-large w3-right"><b>Comments  </b> <span class="w3-badge">2</span></span></p>
+            </div> -->
+          </div>
+        </div>
+      </div>
+
+    <!-- Blog entry -->
+    <div class="w3-card-4 w3-margin w3-white">
+      <img src="facerobot_5.png" alt="Jellyfish Results" style="width:100%">
+        <div class="w3-container">
+          <h3><b>
+          </b></h3>
+          <!-- <h5>Title description, <span class="w3-opacity">April 2, 2014</span></h5> -->
+        </div>
+    
+        <div class="w3-container">
+          <p></p>
+          <div class="w3-row">
+            <!-- <div class="w3-col m8 s12">
+              <p><button class="w3-button w3-padding-large w3-white w3-border"><b>READ MORE »</b></button></p>
+            </div>
+            <div class="w3-col m4 w3-hide-small">
+              <p><span class="w3-padding-large w3-right"><b>Comments  </b> <span class="w3-badge">2</span></span></p>
+            </div> -->
+          </div>
+        </div>
+      </div>
+
+    <!-- Blog entry
+    <div class="w3-card-4 w3-margin w3-white">
+      <img src="jellyfish_nextsteps.png" alt="Jellyfish Next Steps" style="width:100%">
+        <div class="w3-container">
+          <h3><b>Our results have informed the design of a large scale prototype with a 4 cm maximum travel and 3 N of force applied by our magnetic actuator
+          </b></h3>
+         <h5>Title description, <span class="w3-opacity">April 2, 2014</span></h5> -->
+        <!-- </div>
+    
+        <div class="w3-container">
+          <p></p>
+          <div class="w3-row"> -->
+            <!-- <div class="w3-col m8 s12">
+              <p><button class="w3-button w3-padding-large w3-white w3-border"><b>READ MORE »</b></button></p>
+            </div>
+            <div class="w3-col m4 w3-hide-small">
+              <p><span class="w3-padding-large w3-right"><b>Comments  </b> <span class="w3-badge">2</span></span></p>
+            </div> -->
+          <!-- </div>
+        </div>
+      </div> --> 
+<!-- END BLOG ENTRIES -->
+</div>
+
+<!-- Introduction menu -->
+<!-- <div class="w3-col l4"> -->
+  <!-- About Card -->
+  <!-- <div class="w3-card w3-margin w3-margin-top">
+  <img src="/w3images/avatar_g.jpg" style="width:100%">
+    <div class="w3-container w3-white">
+      <h4><b>My Name</b></h4>
+      <p>Just me, myself and I, exploring the universe of uknownment. I have a heart of love and a interest of lorem ipsum and mauris neque quam blog. I want to share my world with you.</p>
+    </div>
+  </div><hr> -->
+  
+  <!-- Posts -->
+  <!-- <div class="w3-card w3-margin">
+    <div class="w3-container w3-padding">
+      <h4>Popular Posts</h4>
+    </div>
+    <ul class="w3-ul w3-hoverable w3-white">
+      <li class="w3-padding-16">
+        <img src="/w3images/workshop.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+        <span class="w3-large">Lorem</span><br>
+        <span>Sed mattis nunc</span>
+      </li>
+      <li class="w3-padding-16">
+        <img src="/w3images/gondol.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+        <span class="w3-large">Ipsum</span><br>
+        <span>Praes tinci sed</span>
+      </li> 
+      <li class="w3-padding-16">
+        <img src="/w3images/skies.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+        <span class="w3-large">Dorum</span><br>
+        <span>Ultricies congue</span>
+      </li>   
+      <li class="w3-padding-16 w3-hide-medium w3-hide-small">
+        <img src="/w3images/rock.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+        <span class="w3-large">Mingsum</span><br>
+        <span>Lorem ipsum dipsum</span>
+      </li>  
+    </ul>
+  </div>
+  <hr>  -->
+ 
+  <!-- Labels / tags -->
+  <!-- <div class="w3-card w3-margin">
+    <div class="w3-container w3-padding">
+      <h4>Keywords</h4>
+    </div>
+    <div class="w3-container w3-white">
+    <p><span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Travel</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">New York</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">London</span>
+      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">IKEA</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">NORWAY</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">DIY</span>
+      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Ideas</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Baby</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Family</span>
+      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">News</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Clothing</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Shopping</span>
+      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Sports</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Games</span>
+    </p>
+    </div>
+  </div> -->
+  
+<!-- END Introduction Menu -->
+</div>
+
+<!-- END GRID -->
+</div><br>
+
+<!-- END w3-content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-dark-grey w3-padding-32 w3-margin-top">
+  <button class="w3-button w3-black w3-disabled w3-padding-large w3-margin-bottom">Previous</button>
+  <button class="w3-button w3-black w3-padding-large w3-margin-bottom">Next »</button>
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+</footer>
+
+</body>
+</html>
